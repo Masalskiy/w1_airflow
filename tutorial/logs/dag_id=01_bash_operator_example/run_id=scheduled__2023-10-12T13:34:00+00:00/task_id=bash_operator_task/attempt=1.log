@@ -1,0 +1,17 @@
+[2023-10-29T07:07:57.610+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 01_bash_operator_example.bash_operator_task scheduled__2023-10-12T13:34:00+00:00 [queued]>
+[2023-10-29T07:07:57.636+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 01_bash_operator_example.bash_operator_task scheduled__2023-10-12T13:34:00+00:00 [queued]>
+[2023-10-29T07:07:57.637+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-10-29T07:07:57.671+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): bash_operator_task> on 2023-10-12 13:34:00+00:00
+[2023-10-29T07:07:57.686+0000] {standard_task_runner.py:57} INFO - Started process 4647 to run task
+[2023-10-29T07:07:57.694+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '01_bash_operator_example', 'bash_operator_task', 'scheduled__2023-10-12T13:34:00+00:00', '--job-id', '819', '--raw', '--subdir', 'DAGS_FOLDER/01_bash_example.py', '--cfg-path', '/tmp/tmprwqf4vz7']
+[2023-10-29T07:07:57.701+0000] {standard_task_runner.py:85} INFO - Job 819: Subtask bash_operator_task
+[2023-10-29T07:07:57.801+0000] {task_command.py:416} INFO - Running <TaskInstance: 01_bash_operator_example.bash_operator_task scheduled__2023-10-12T13:34:00+00:00 [running]> on host 61af0ece57d5
+[2023-10-29T07:07:57.973+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Denis Mas' AIRFLOW_CTX_DAG_ID='01_bash_operator_example' AIRFLOW_CTX_TASK_ID='bash_operator_task' AIRFLOW_CTX_EXECUTION_DATE='2023-10-12T13:34:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-12T13:34:00+00:00'
+[2023-10-29T07:07:57.978+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-10-29T07:07:57.980+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', "echo 'Сейчас я создам папку:' && mkdir -p /tmp/test"]
+[2023-10-29T07:07:58.010+0000] {subprocess.py:86} INFO - Output:
+[2023-10-29T07:07:58.015+0000] {subprocess.py:93} INFO - Сейчас я создам папку:
+[2023-10-29T07:07:58.022+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-10-29T07:07:58.086+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=01_bash_operator_example, task_id=bash_operator_task, execution_date=20231012T133400, start_date=20231029T070757, end_date=20231029T070758
+[2023-10-29T07:07:58.149+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-29T07:07:58.224+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
