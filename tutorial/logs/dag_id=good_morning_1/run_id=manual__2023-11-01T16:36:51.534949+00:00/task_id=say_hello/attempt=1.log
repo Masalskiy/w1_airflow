@@ -1,0 +1,17 @@
+[2023-11-01T16:36:55.230+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: good_morning_1.say_hello manual__2023-11-01T16:36:51.534949+00:00 [queued]>
+[2023-11-01T16:36:55.251+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: good_morning_1.say_hello manual__2023-11-01T16:36:51.534949+00:00 [queued]>
+[2023-11-01T16:36:55.252+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-11-01T16:36:55.280+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): say_hello> on 2023-11-01 16:36:51.534949+00:00
+[2023-11-01T16:36:55.293+0000] {standard_task_runner.py:57} INFO - Started process 5281 to run task
+[2023-11-01T16:36:55.298+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'good_morning_1', 'say_hello', 'manual__2023-11-01T16:36:51.534949+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/good_mornig.py', '--cfg-path', '/tmp/tmp7na_3kby']
+[2023-11-01T16:36:55.303+0000] {standard_task_runner.py:85} INFO - Job 31: Subtask say_hello
+[2023-11-01T16:36:55.373+0000] {task_command.py:416} INFO - Running <TaskInstance: good_morning_1.say_hello manual__2023-11-01T16:36:51.534949+00:00 [running]> on host cc3c0240a654
+[2023-11-01T16:36:55.503+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mdv' AIRFLOW_CTX_DAG_ID='good_morning_1' AIRFLOW_CTX_TASK_ID='say_hello' AIRFLOW_CTX_EXECUTION_DATE='2023-11-01T16:36:51.534949+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-01T16:36:51.534949+00:00'
+[2023-11-01T16:36:55.507+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-11-01T16:36:55.509+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Good morning my diggers!"']
+[2023-11-01T16:36:55.540+0000] {subprocess.py:86} INFO - Output:
+[2023-11-01T16:36:55.546+0000] {subprocess.py:93} INFO - Good morning my diggers!
+[2023-11-01T16:36:55.547+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-11-01T16:36:55.588+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=good_morning_1, task_id=say_hello, execution_date=20231101T163651, start_date=20231101T163655, end_date=20231101T163655
+[2023-11-01T16:36:55.672+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-01T16:36:55.717+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -26,12 +26,15 @@ with DAG(dag_id="01_bash_operator_example",
          schedule_interval="* * * * *",
          # для поиска среди других дагов (фишка версии 2.4)
          tags=["bash","Denis"], 
-         
-         catchup=True) as dag:
-
+         # False говорит что не нужно запускать предыдущие задания. 
+         # (в очередь не встанут задачи за пропущенные дни)
+         catchup=False) as dag:
+    # это какая-то точка входа для красоты
     start = EmptyOperator(task_id='start') 
+    # важный параметр это task_id
     step = DummyOperator(task_id="step")
 
+    
     bash = BashOperator(
         task_id='bash_operator_task',
         bash_command=f"echo 'Сейчас я создам папку:' && mkdir -p /tmp/test"

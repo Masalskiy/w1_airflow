@@ -1,0 +1,29 @@
+[2023-11-02T15:11:05.309+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: good_morning_1.say_hello scheduled__2023-11-02T14:10:00+00:00 [queued]>
+[2023-11-02T15:11:05.331+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: good_morning_1.say_hello scheduled__2023-11-02T14:10:00+00:00 [queued]>
+[2023-11-02T15:11:05.332+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 2
+[2023-11-02T15:11:05.354+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): say_hello> on 2023-11-02 14:10:00+00:00
+[2023-11-02T15:11:05.364+0000] {standard_task_runner.py:57} INFO - Started process 782 to run task
+[2023-11-02T15:11:05.369+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'good_morning_1', 'say_hello', 'scheduled__2023-11-02T14:10:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/good_mornig.py', '--cfg-path', '/tmp/tmpds0wog9g']
+[2023-11-02T15:11:05.376+0000] {standard_task_runner.py:85} INFO - Job 8: Subtask say_hello
+[2023-11-02T15:11:05.467+0000] {task_command.py:416} INFO - Running <TaskInstance: good_morning_1.say_hello scheduled__2023-11-02T14:10:00+00:00 [running]> on host 92cf584970c8
+[2023-11-02T15:11:05.579+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mdv' AIRFLOW_CTX_DAG_ID='good_morning_1' AIRFLOW_CTX_TASK_ID='say_hello' AIRFLOW_CTX_EXECUTION_DATE='2023-11-02T14:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-11-02T14:10:00+00:00'
+[2023-11-02T15:11:05.582+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-11-02T15:11:05.584+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker info']
+[2023-11-02T15:11:05.605+0000] {subprocess.py:86} INFO - Output:
+[2023-11-02T15:11:05.636+0000] {subprocess.py:93} INFO - Client:
+[2023-11-02T15:11:05.637+0000] {subprocess.py:93} INFO -  Context:    default
+[2023-11-02T15:11:05.638+0000] {subprocess.py:93} INFO -  Debug Mode: false
+[2023-11-02T15:11:05.638+0000] {subprocess.py:93} INFO - 
+[2023-11-02T15:11:05.639+0000] {subprocess.py:93} INFO - Server:
+[2023-11-02T15:11:05.640+0000] {subprocess.py:93} INFO - ERROR: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+[2023-11-02T15:11:05.641+0000] {subprocess.py:93} INFO - errors pretty printing info
+[2023-11-02T15:11:05.642+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-11-02T15:11:05.664+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-11-02T15:11:05.672+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=good_morning_1, task_id=say_hello, execution_date=20231102T141000, start_date=20231102T151105, end_date=20231102T151105
+[2023-11-02T15:11:05.714+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 8 for task say_hello (Bash command failed. The command returned a non-zero exit code 1.; 782)
+[2023-11-02T15:11:05.747+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-02T15:11:05.798+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

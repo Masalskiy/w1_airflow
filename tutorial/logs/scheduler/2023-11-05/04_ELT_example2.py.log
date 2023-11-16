@@ -1,0 +1,48 @@
+[2023-11-05T02:06:59.839+0000] {processor.py:157} INFO - Started process (PID=36327) to work on /opt/airflow/dags/04_ELT_example2.py
+[2023-11-05T02:06:59.842+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/04_ELT_example2.py for tasks to queue
+[2023-11-05T02:06:59.850+0000] {logging_mixin.py:151} INFO - [2023-11-05T02:06:59.849+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/04_ELT_example2.py
+[2023-11-05T02:06:59.970+0000] {logging_mixin.py:151} INFO - [2023-11-05T02:06:59.962+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/04_ELT_example2.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/04_ELT_example2.py", line 19, in <module>
+    conn_id = Variable.get("conn_name")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/variable.py", line 140, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable conn_name does not exist'
+[2023-11-05T02:06:59.973+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/04_ELT_example2.py
+[2023-11-05T02:07:00.032+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/04_ELT_example2.py took 0.202 seconds
+[2023-11-05T02:07:31.051+0000] {processor.py:157} INFO - Started process (PID=36389) to work on /opt/airflow/dags/04_ELT_example2.py
+[2023-11-05T02:07:31.054+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/04_ELT_example2.py for tasks to queue
+[2023-11-05T02:07:31.061+0000] {logging_mixin.py:151} INFO - [2023-11-05T02:07:31.060+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/04_ELT_example2.py
+[2023-11-05T02:07:31.119+0000] {logging_mixin.py:151} INFO - [2023-11-05T02:07:31.115+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/04_ELT_example2.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/04_ELT_example2.py", line 19, in <module>
+    conn_id = Variable.get("conn_name")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/variable.py", line 140, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable conn_name does not exist'
+[2023-11-05T02:07:31.121+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/04_ELT_example2.py
+[2023-11-05T02:07:31.150+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/04_ELT_example2.py took 0.107 seconds
+[2023-11-05T02:10:13.915+0000] {processor.py:157} INFO - Started process (PID=36425) to work on /opt/airflow/dags/04_ELT_example2.py
+[2023-11-05T02:10:13.927+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/04_ELT_example2.py for tasks to queue
+[2023-11-05T02:10:13.951+0000] {logging_mixin.py:151} INFO - [2023-11-05T02:10:13.950+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/04_ELT_example2.py
+[2023-11-05T02:10:14.371+0000] {logging_mixin.py:151} INFO - [2023-11-05T02:10:14.337+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/04_ELT_example2.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/04_ELT_example2.py", line 19, in <module>
+    conn_id = Variable.get("conn_name")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/variable.py", line 140, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable conn_name does not exist'
+[2023-11-05T02:10:14.381+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/04_ELT_example2.py
+[2023-11-05T02:10:14.549+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/04_ELT_example2.py took 0.670 seconds

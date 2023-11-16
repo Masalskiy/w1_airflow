@@ -55,7 +55,9 @@ x-airflow-common:
   environment:
     &airflow-common-env
     AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: 5
+    # Рекомендован CeleryExecutor для production т.к. он быстрее
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+    # Определение базы данных для CeleryExecutor
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     # For backward compatibility, with Airflow <2.3
     AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
